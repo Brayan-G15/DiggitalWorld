@@ -1,7 +1,7 @@
 import {Router} from 'express'
-import {register, login, isAuthenticated, logout, deposit, withdrawals}  from '../controllers/authController.js'
-
 const router = Router();
+
+import {register,login, deposit, withdrawals, isAuthenticated, logout} from '../controllers/authController.js'
 
 
 //router para las vistas
