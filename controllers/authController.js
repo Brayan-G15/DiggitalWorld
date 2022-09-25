@@ -3,7 +3,7 @@ import bcryptjs from "bcryptjs"
 import { conection } from "../src/db.js";
 import { promisify } from "util";
 
-const { jwt } = pkg;
+const  jwt = pkg;
 
 //Procedimiento para registrarnos
 export const register = async (req, res) => {
