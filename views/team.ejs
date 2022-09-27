@@ -100,11 +100,11 @@
                 <form class="uploading-form-team" method="post" action="/team"  id="uploadForm">
                     <div class="userNameText">
                         <label for="userName">User</label>
-                        <input type="text" name="userName" id="userName" placeholder="Enter Username" required aria-required="true">
+                        <input type="text" name="user" id="user" placeholder="Enter Username" required aria-required="true">
                     </div>
                     <div class="walletDirection">
                         <label for="wallet">Guest user </label>
-                        <input type="text" name="wallet" id="direction" placeholder="Enter Your Guest User" required>
+                        <input type="text" name="guestUser" id="guestUser" placeholder="Enter Your Guest User" required>
                     </div>
                     
                     <input class="btn-submit" type="submit">
@@ -125,6 +125,21 @@
 
 
     <script src="js/btnCopy.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@10"></script>
+
+        <% if (typeof alert != "undefined")  { %>
+        <script>
+        Swal.fire({
+        title:'<%= alertTitle %>',
+        text:'<%= alertMessage %>',
+        icon:'<%= alertIcon %>',
+        showConfirmButton: '<%= showConfirmButton %>',
+        timer: '<%= timer %>'
+        }).then(()=>{
+        window.location='/<%= ruta %>'
+        })
+        </script>
+        <% } %>
 
 </body>
 </html>
